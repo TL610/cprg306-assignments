@@ -1,9 +1,9 @@
 export default function Item({ name, quantity, category, number }) {
   return (
-    <section className="m-2 bg-azure- w-[40%]">
+    <section className="m-2 w-[30%] bg-cyan-400">
       <ul>
-        <p className="text-4x1 font-bold mt-2">{name}</p>
-        <li className="text-1g">
+        <p className="text-2xl font-bold mt-2">{name}</p>
+        <li className="text-lg">
           Buy {quantity} in {category}
         </li>
       </ul>

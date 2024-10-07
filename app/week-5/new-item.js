@@ -15,7 +15,6 @@ export default function NewItem() {
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
-    //Item.create({ name, quantity, category }); // Create a new item
     //Log the item object to the console
     //Create an item object with the current values of name, quantity, and category.
     const item = {
@@ -29,6 +28,10 @@ export default function NewItem() {
       "Name: " + name + " Quantity: " + quantity + " Category: " + category
     );
     // Reset the state variables to their initial values
+    reset();
+  };
+
+  const reset = () => {
     setName("");
     setQuantity(1);
     setCategory("Produce");
@@ -46,6 +49,7 @@ export default function NewItem() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          placeholder="Item name" // placeholder - hint text
           required // required attribute
         />
       </div>

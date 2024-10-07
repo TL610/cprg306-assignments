@@ -13,15 +13,21 @@ export default function NewItem() {
     setQuantity(quantity - 1);
   };
 
+  const reset = () => {
+    setName("");
+    setQuantity(1);
+    setCategory("Produce");
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
-    //Log the item object to the console
     //Create an item object with the current values of name, quantity, and category.
     const item = {
       Name: name,
       Quantity: quantity,
       Item: category,
     };
+    //Log the item object to the console
     console.log("Item:", item);
     // Display an alert with the current item values
     alert(
@@ -29,12 +35,6 @@ export default function NewItem() {
     );
     // Reset the state variables to their initial values
     reset();
-  };
-
-  const reset = () => {
-    setName("");
-    setQuantity(1);
-    setCategory("Produce");
   };
 
   return (

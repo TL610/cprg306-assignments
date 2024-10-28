@@ -115,7 +115,7 @@ export default function NewItem({ onAddItem }) {
           className="
           font-bold
           h-9 w-96 mt-4 rounded-lg
-          text-slate-100 
+          text-white 
           bg-blue-400 
           hover:bg-blue-700"
         >
